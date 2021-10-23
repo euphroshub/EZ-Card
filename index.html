@@ -19,10 +19,14 @@
             </header>
 
             <section class="c-Holes">
-                <p>Enter the number of holes</p>
+                <p>Select the number of holes for this round</p>
 
                 <form action="">
-                    <input type="text" id="holes" name="holes" required><br><br>
+                    <select id="holes" name="holes" required>
+                        <option value="18">18</option>
+                        <option value="9">9</option>
+                    </select> 
+                    <br><br>
                 </form>
             </section>
 
@@ -45,7 +49,6 @@
             <section class="gameControls">
                 <button class="start">Start the game</button>
                 <button class="next hidden" onclick="buildScore();">Next hole</button>
-                <button class="previous hidden">Previous hole</button>
             </section>
 
             <footer>

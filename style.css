@@ -23,6 +23,8 @@ button {
     text-transform: uppercase;
     outline: none;
     border: none;
+    border-radius: 20px;
+    cursor: pointer;
 }
 
 main {
