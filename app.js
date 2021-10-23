@@ -54,3 +54,12 @@ function buildScore() {
     holeScore++;
     document.getElementById("score").value = '';
 }
+
+
+// TODO
+
+// Create a select box instead for the number of holes, to make it only 9 or 18.
+// Validation for the game to start if the value of the par and hole is not empty.
+// Make the next button clickable only for the number of hole set by the user at the beginning.
+// Adding array value together at the end of the game
+// Calculate the par, so the score - the par resulting in the par score (with - and + depending if its over or under)
