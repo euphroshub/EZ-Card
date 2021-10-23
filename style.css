@@ -1,0 +1,126 @@
+/* Reset and background image */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+input {
+    outline: none;
+    background: transparent;
+}
+
+button {
+    padding: 10px;
+    background: greenyellow;
+    color: darkgreen;
+    text-transform: uppercase;
+    outline: none;
+    border: none;
+}
+
+main {
+    display: flex;
+    height:100%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bg-image {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.bg-image img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+/* Header */
+.appIntro {
+    text-align: center;
+}
+
+.appIntro h1 {
+    margin-bottom: 15px;
+}
+
+/* Golf course lenght */
+.c-Holes {
+    text-align: center;
+}
+
+.c-Holes p {
+    margin-bottom: 15px;
+}
+
+.c-Holes form input {
+    width: 50px;
+    height: 20px;
+    text-align: center;
+}
+
+
+/* Golf course normal */
+.c-Par {
+    text-align: center;
+}
+
+.c-Par p {
+    margin-bottom: 15px;
+}
+
+.c-Par form input {
+    width: 50px;
+    height: 20px;
+    text-align: center;
+}
+
+
+/* Game score normal */
+.c-Game {
+    text-align: center;
+}
+
+.c-Game p {
+    margin-bottom: 15px;
+}
+
+.c-Game form input {
+    width: 50px;
+    height: 20px;
+    text-align: center;
+}
+
+
+
+/* Functionality classes */
+.hidden {
+    display: none;
+}
+
+.shown {
+    display: block;
+}
+
+
+footer {
+    font-size: 10px;
+    font-style: italic;
+    padding: 10px;
+    color: white;
+}
+
+

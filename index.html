@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+    <link rel="stylesheet" href="style.css" />
+    <title>Ez Golf Card | v1.0Beta</title>
+</head>
+    <body>
+        <main>
+            <div class="bg-image">
+                <img src="./img/golfintro.jpeg" class="bg" alt="Intro image">
+            </div>
+
+            <header class="appIntro">
+                <h1>Welcome to Ez-Card!</h1>
+                <h2>The simplest golf card ever.</h2>
+            </header>
+
+            <section class="c-Holes">
+                <p>Enter the number of holes</p>
+
+                <form action="">
+                    <input type="text" id="holes" name="holes" required><br><br>
+                </form>
+            </section>
+
+            <section class="c-Par">
+                <p>Enter the par of the golf course</p>
+
+                <form action="">
+                    <input type="text" id="par" name="par" required><br><br>
+                </form>
+            </section>
+
+            <section class="c-Game hidden">
+                <p>Enter your score</p>
+
+                <form action="">
+                    <input type="text" id="score" name="score" required><br><br>
+                </form>
+            </section>
+
+            <section class="gameControls">
+                <button class="start">Start the game</button>
+                <button class="next hidden" onclick="buildScore();">Next hole</button>
+                <button class="previous hidden">Previous hole</button>
+            </section>
+
+            <footer>
+                <p>made by euphros</p>
+            </footer>
+
+        </main>
+        <script src="app.js"></script>
+    </body>
+</html>
