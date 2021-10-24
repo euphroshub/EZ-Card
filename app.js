@@ -15,7 +15,7 @@ const holes = document.getElementById("holes").value;
 
 // To calculate the score each holes
 let holeScore = 0;
-const totalScore = Array();
+const scoreList = [];
 
 // Function to start the game - displaying and hiding elements needed.
 function startGame() {
@@ -46,20 +46,27 @@ function startGame() {
 
 startGame();
 
-
-
 // Adding score value to the array
 function buildScore() {
-    totalScore[holeScore] = document.getElementById("score").value;
+    scoreList[holeScore] = document.getElementById("score").value;
     
-    console.log(`Element: ${totalScore[holeScore]} Added at index ${holeScore}`);
-    console.log(totalScore);
+    console.log(`Element: ${scoreList[holeScore]} Added at index ${holeScore}`);
+    console.log(scoreList);
 
     holeScore++;
     document.getElementById("score").value = '';
 
-}   
+    // Adding the score to the final score.
+    let finalScore = 0;
 
+    for (let i = 0; i < totalScore.length; i++) {
+        finalScore += parseInt(scoreList[i]);
+    }
+
+    console.log(finalScore);
+
+    console.log(holes);
+}
 
 
 // TODO
