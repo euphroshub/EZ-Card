@@ -48,6 +48,8 @@ function startGame() {
         const par = parseInt(document.getElementById("par").value);
         let holes = parseInt(document.getElementById("holes").value);
 
+
+        // Logs
         console.log(`Holes: ${holes}`);
         console.log(`Par: ${par}`);
 
@@ -71,7 +73,7 @@ function buildScore() {
     // Switching hole on each btn click
     currentHole++;
 
-    // Reducing the number of holes left in the game
+    // Reducing the number of holes left in the game so when it reaches 0 the game ends.
     holes--;
 
     // Updating the hole number displayed on the UI.
