@@ -49,7 +49,7 @@ function startGame() {
         let holes = parseInt(document.getElementById("holes").value);
 
 
-        // Logs
+        // Test Logs
         console.log(`Holes: ${holes}`);
         console.log(`Par: ${par}`);
 
@@ -61,7 +61,7 @@ function startGame() {
 startGame();
 
 
-// Adding score value to the array
+// Adding score value to the array and generating 
 function buildScore() {
     // To update the hole number
     const holeNumberElement = holeNumer[0];
@@ -94,7 +94,7 @@ function buildScore() {
 
     
 
-    // Logs
+    // Test Logs
     console.log(`Final score: ${finalScore}`);
     console.log(`Holes left: ${holes}`);
 
@@ -106,9 +106,11 @@ function buildScore() {
 
 // TODO
 
+// Swaping background image when switching hole.
+// Creating the UI for when the game ends
+// Creating a function for the end of the game and call it in the if block in buildScore(); when holes === 0.
+// Adding an endgame button visible during the game, and reseting to first screen when clicked, also visible on the last scorescreen but not on the first screen.
+// Calculate the par, so the score - the par resulting in the par score (with - and + depending if its over or under) - only visible on the scorescreen
+// Styling the interface for a better and smoother UX.
 
-// Make the next button clickable only for the number of hole set by the user at the beginning.
-// Adding array value together at the end of the game
-// Calculate the par, so the score - the par resulting in the par score (with - and + depending if its over or under)
 
-// Styling the interface better and smoother.
