@@ -112,5 +112,6 @@ function buildScore() {
 // Adding an endgame button visible during the game, and reseting to first screen when clicked, also visible on the last scorescreen but not on the first screen.
 // Calculate the par, so the score - the par resulting in the par score (with - and + depending if its over or under) - only visible on the scorescreen
 // Styling the interface for a better and smoother UX.
+// Adding message in the scorescreen depending on the score played in the round.
 
 
