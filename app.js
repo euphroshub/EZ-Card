@@ -113,5 +113,7 @@ function buildScore() {
 // Calculate the par, so the score - the par resulting in the par score (with - and + depending if its over or under) - only visible on the scorescreen
 // Styling the interface for a better and smoother UX.
 // Adding message in the scorescreen depending on the score played in the round.
+// Adding a timer to time the duration of the whole game from start to finish.
 
-
+// ** MAYBE & AT THE END ** //
+// Splitting the First screen, Holes screen, and score screen into 3 different HTML components to have less js code to hide / show elements.
