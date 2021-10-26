@@ -20,6 +20,9 @@
 
             <header class="holeNumber hidden">
                 <h2></h2>
+                <div class="exit">
+                    <button class="restart">Exit</button>
+                </div>
             </header>
 
             <header class="scoreDisplay hidden">
@@ -57,6 +60,14 @@
             <section class="gameControls">
                 <button class="start">Start the game</button>
                 <button class="next hidden" onclick="buildScore();">Next hole</button>
+            </section>
+
+            <section class="scoreScreen hidden">
+                <h1>Score</h1>
+                <h2 class="js-score"></h2>
+                <h2 class="js-parScore"></h2>
+                <h2 class="js-time"></h2>
+                <button class="restart">Exit to a new game</button>
             </section>
 
             <footer>
