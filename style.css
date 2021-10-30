@@ -16,6 +16,21 @@
     box-sizing: inherit;
 }
 
+.bg-image {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.bg-image img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
 body {
     position: relative;
     height: 100vh;
@@ -49,6 +64,7 @@ select {
     border-radius: 5px;
     width: 50px;
     outline: none;
+    text-align: center;
 }
 
 button {
@@ -64,86 +80,19 @@ button {
 
 main {
     display: flex;
-    height:100%;
+    height: 100%;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
 }
 
-.bg-image {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: -1;
-}
 
-.bg-image img {
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
-}
-
-/* Header */
-.appIntro {
-    text-align: center;
-}
-
-.appIntro h1 {
-    margin-bottom: 15px;
-}
-
-/* Golf course lenght */
-.c-Holes {
-    text-align: center;
-}
-
-.c-Holes p {
-    margin-bottom: 15px;
-}
-
-
-/* Golf course normal */
-.c-Par {
-    text-align: center;
-}
-
-.c-Par p {
-    margin-bottom: 15px;
-}
-
-.holeNumber {
-    display: flex;
-    justify-content: space-between;
-    width: 60%;
-    padding-top: 15px
-}
-
-
-/* Game score normal */
-.c-Game {
-    text-align: center;
-}
-
-.c-Game p {
-    margin-bottom: 15px;
-}
-
-.restart {
-    font-weight: 700;
-    background: transparent;
-    color: white;
-    border: 1px solid gray;
-    border-radius: 5px;
-}
 
 
 /* Functionality classes */
 .hidden {
     display: none;
 }
-
 
 /* Footer */
 footer {

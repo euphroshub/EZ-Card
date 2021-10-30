@@ -4,25 +4,77 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
-    <link rel="stylesheet" href="test.css" />
+    <link rel="stylesheet" href="style.css" />
     <title>Ez Golf Card | v1.0Beta</title>
 </head>
-<body>
-    <main>
+    <body>
+        <main>
+            <div class="bg-image">
+                <img src="./img/golfintro.jpeg" class="bg" alt="Intro image">
+            </div>
 
-        <div class="box">
-            <select>
-              <option>Option 1</option>
-              <option>Option 2</option>
-              <option>Option 3</option>
-              <option>Option 4</option>
-              <option>Option 5</option>
-            </select>
-          </div>
+            <header class="appIntro">
+                <h1>EZ CARD</h1>
+                <h2>A simple golf card</h2>
+            </header>
 
+            <header class="holeNumber hidden">
+                <h2></h2>
+                <div class="exit">
+                    <button class="restart">Exit</button>
+                </div>
+            </header>
 
-        <footer></footer>
-    </main>
-    <script src="test.js"></script>
-</body>
+            <header class="scoreDisplay hidden">
+                <h2></h2>
+            </header>
+
+            <section class="c-Holes">
+                <p>Select the number of holes for this round</p>
+
+                <form action="">
+                    <select id="holes" name="holes" required>
+                        <option value="18">18</option>
+                        <option value="9">9</option>
+                    </select> 
+                    <br><br>
+                </form>
+            </section>
+
+            <section class="c-Par">
+                <p>Enter the par of the golf course</p>
+
+                <form action="">
+                    <input type="number" id="par" name="par" required><br><br>
+                </form>
+            </section>
+
+            <section class="c-Game hidden">
+                <p>Enter your score</p>
+
+                <form action="">
+                    <input type="number" id="score" name="score" required><br><br>
+                </form>
+            </section>
+
+            <section class="gameControls">
+                <button class="start">Start the game</button>
+                <button class="next hidden" onclick="buildScore();">Next hole</button>
+            </section>
+
+            <section class="scoreScreen hidden">
+                <h1>Score</h1>
+                <h2 class="js-score"></h2>
+                <h2 class="js-parScore"></h2>
+                <h2 class="js-time"></h2>
+                <button class="restart">Exit to a new game</button>
+            </section>
+
+            <footer>
+                <p>made by euphros</p>
+            </footer>
+
+        </main>
+        <script src="app.js"></script>
+    </body>
 </html>

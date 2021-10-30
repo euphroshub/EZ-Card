@@ -13,66 +13,6 @@
                 <img src="./img/golfintro.jpeg" class="bg" alt="Intro image">
             </div>
 
-            <header class="appIntro">
-                <h1>Welcome to Ez-Card!</h1>
-                <h2>The simplest golf card ever.</h2>
-            </header>
-
-            <header class="holeNumber hidden">
-                <h2></h2>
-                <div class="exit">
-                    <button class="restart">Exit</button>
-                </div>
-            </header>
-
-            <header class="scoreDisplay hidden">
-                <h2></h2>
-            </header>
-
-            <section class="c-Holes">
-                <p>Select the number of holes for this round</p>
-
-                <form action="">
-                    <select id="holes" name="holes" required>
-                        <option value="18">18</option>
-                        <option value="9">9</option>
-                    </select> 
-                    <br><br>
-                </form>
-            </section>
-
-            <section class="c-Par">
-                <p>Enter the par of the golf course</p>
-
-                <form action="">
-                    <input type="number" id="par" name="par" required><br><br>
-                </form>
-            </section>
-
-            <section class="c-Game hidden">
-                <p>Enter your score</p>
-
-                <form action="">
-                    <input type="number" id="score" name="score" required><br><br>
-                </form>
-            </section>
-
-            <section class="gameControls">
-                <button class="start">Start the game</button>
-                <button class="next hidden" onclick="buildScore();">Next hole</button>
-            </section>
-
-            <section class="scoreScreen hidden">
-                <h1>Score</h1>
-                <h2 class="js-score"></h2>
-                <h2 class="js-parScore"></h2>
-                <h2 class="js-time"></h2>
-                <button class="restart">Exit to a new game</button>
-            </section>
-
-            <footer>
-                <p>made by euphros</p>
-            </footer>
 
         </main>
         <script src="app.js"></script>
