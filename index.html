@@ -5,14 +5,72 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
     <link rel="stylesheet" href="style.css" />
-    <title>Ez Golf Card | v1.0Beta</title>
+    <title>Ez Golf Card | v1.1Beta</title>
 </head>
     <body>
         <main>
-            <div class="bg-image">
+            <div class="bgImage">
                 <img src="./img/golfintro.jpeg" class="bg" alt="Intro image">
             </div>
 
+            <!--Intro section-->
+            <section class="c-Intro">
+                <div class="c-Intro__header">
+                    <h1>EZ CARD</h1>
+                </div>
+                <div class="c-Intro__gameOptions">
+                    <div class="c-Intro__gameOptions--holes">
+                        <h4>Select the number of holes for this round</h4>
+                        <select name="holes" id="holes" class="holes" required>
+                            <option value="" selected disabled hidden># of holes to play</option>
+                            <option value="18">18</option>
+                            <option value="9">9</option>
+                        </select>
+                    </div>
+                    <div class="c-Intro__gameOptions--par">
+                        <h4>Enter the par of the golf course</h4>
+                        <input type="number" id="par" class="par" maxlength="2" placeholder="Par" required>
+                    </div>
+                </div>
+                <div class="c-Intro__startButton">
+                    <button class="start">Start the round</button>
+                </div>
+            </section>
+
+            <!--Game section section-->
+            <section class="c-Game hidden">
+                <div class="c-Game__holeNumber">
+                    <h2 class="holeNumber"></h2>
+                </div>
+                <div class="c-Game__holeScore">
+                    <input type="number" id="score" class="score" maxlength="2" placeholder="Score" required>
+                </div>
+                <div class="c-Game__nextHole">
+                    <button class="next">Next hole</button>
+                </div>
+            </section>
+
+            <!--Score screen section section-->
+            <div class="c-endGame hidden">
+                <div class="c-endGame__title">
+                    <h1>Round over</h1>
+                </div>
+                <div class="c-endGame__finalScore">
+                    <h3>You played a round of</h3>
+                    <h1 class="finalScore"></h1>
+                    <h2 class="parScore"></h2>
+                </div>
+                <div class="c-endGame__scoreQuality">
+                    <p>Not bad!</p>
+                </div>
+                <div class="c-endGame__quit">
+                    <button class="end">Quit</button>
+                </div>
+            </div>
+
+            <footer>
+                <p>made by euphros</p>
+            </footer>
 
         </main>
         <script src="app.js"></script>
