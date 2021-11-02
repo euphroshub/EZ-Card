@@ -41,6 +41,10 @@ btnStart.addEventListener('click', function(e) {
     } else {
         alert("You must enter the number of holes and a par value between 29 and 73 to start the game");
     }
+
+    // Logs
+    console.log(holesToPlay, typeof holesToPlay);
+    console.log(coursePar, typeof holesToPlay);
 });
 
 // Play the game, update scores
