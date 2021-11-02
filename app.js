@@ -21,7 +21,8 @@ const inputScore = document.querySelector('.score');
 
 // Variables
 let currentHole = 1;
-const totalScore = [];
+let holeScore = 0;
+const scoreList = [];
 
 
 // Start the game
@@ -32,15 +33,51 @@ btnStart.addEventListener('click', function(e) {
     let holesToPlay = +selectHoles.value;
     let coursePar = +inputPar.value;
 
-    // Updating the ui
-    intro.classList.add('hidden');
-    game.classList.remove('hidden');
+    if ((holesToPlay != '') && (coursePar >= 29 <= 73 )) {
+        // Updating the ui to start the game if the condition is met.
+        intro.classList.add('hidden');
+        game.classList.remove('hidden');
+        holeNumber.textContent = `Hole ${currentHole}`;
+    } else {
+        alert("You must enter the number of holes and a par value between 29 and 73 to start the game");
+    }
+});
+
+// Play the game, update scores
+
+btnNext.addEventListener('click', function(e) {
+    e.preventDefault();
+
+    // Checking the holes to play and reducing them at each holes played
+    let holesToPlay = +selectHoles.value;
+    holesToPlay--;
+
+    // Displaying the hole played right now in the UI
+    currentHole++;
     holeNumber.textContent = `Hole ${currentHole}`;
 
-    // Test logs
-    console.log(holesToPlay, typeof holesToPlay);
-    console.log(coursePar, typeof coursePar);
+
+    // Adding the score to the array and adding them together.
+    scoreList[holeScore] = document.querySelector('.score').value;
+    holeScore++;
+
+    let addedScore = 0;
+
+    for (let i = 0; i < scoreList.length; i++) {
+        addedScore += parseInt(scoreList[i]);
+    }
+
+    // Reseting the score input after each holes
+    document.querySelector('.score').value = '';
+
+
+
+    // Test Logs
+    console.log(`Total score: ${addedScore}`);
+    console.log(`Holes left: ${holesToPlay}`);
+    console.log(`Current hole: ${currentHole}`);
 });
+
 
 
 
