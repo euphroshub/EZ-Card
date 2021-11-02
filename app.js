@@ -44,15 +44,14 @@ btnStart.addEventListener('click', function(e) {
 });
 
 // Play the game, update scores
-
 btnNext.addEventListener('click', function(e) {
     e.preventDefault();
 
-    // Checking the holes to play and reducing them at each holes played
+    // Checking the total holes to play and reducing them at each holes played.
     let holesToPlay = +selectHoles.value;
     holesToPlay--;
 
-    // Displaying the hole played right now in the UI
+    // Displaying the current hole in the UI.
     currentHole++;
     holeNumber.textContent = `Hole ${currentHole}`;
 
@@ -77,6 +76,17 @@ btnNext.addEventListener('click', function(e) {
     console.log(`Holes left: ${holesToPlay}`);
     console.log(`Current hole: ${currentHole}`);
 });
+
+
+// TODO
+
+// Swaping background image when switching hole.
+// Adding an endgame button visible during the game, and reseting to first screen when clicked, also visible on the last scorescreen but not on the first screen.
+// Calculate the par, so the score - the par resulting in the par score (with - and + depending if its over or under) - only visible on the scorescreen
+// Styling the interface for a better and smoother UX.
+// Adding message in the scorescreen depending on the score played in the round.
+// Adding a timer to time the duration of the whole game from start to finish.
+// Create a popup function instead of using an alert before starting the game
 
 
 

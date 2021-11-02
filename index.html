@@ -21,11 +21,13 @@
                 <div class="c-Intro__gameOptions">
                     <div class="c-Intro__gameOptions--holes">
                         <h4>Select the number of holes for this round</h4>
-                        <select name="holes" id="holes" class="holes" required>
-                            <option value="" selected disabled hidden># of holes to play</option>
-                            <option value="18">18</option>
-                            <option value="9">9</option>
-                        </select>
+                        <div class="box">
+                            <select name="holes" id="holes" class="holes" required>
+                                <option value="" selected disabled hidden>Holes to play</option>
+                                <option value="18">18</option>
+                                <option value="9">9</option>
+                            </select>
+                        </div>
                     </div>
                     <div class="c-Intro__gameOptions--par">
                         <h4>Enter the par of the golf course</h4>
@@ -74,5 +76,6 @@
 
         </main>
         <script src="app.js"></script>
+        <script src="https://use.fontawesome.com/db7a7210b3.js"></script>
     </body>
 </html>
