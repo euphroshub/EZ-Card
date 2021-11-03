@@ -96,6 +96,7 @@ btnNext.addEventListener('click', function(e) {
         
         // Conditions to tell you if it was a good or a bad game.
 
+
     }
 
 
@@ -122,13 +123,7 @@ btnEnd.addEventListener('click', function(e) {
 
 // Swaping background image when switching hole.
 // Adding an endgame button visible during the game, and reseting to first screen when clicked, also visible on the last scorescreen but not on the first screen.
-// Calculate the par, so the score - the par resulting in the par score (with - and + depending if its over or under) - only visible on the scorescreen
 // Styling the interface for a better and smoother UX.
 // Adding message in the scorescreen depending on the score played in the round.
 // Adding a timer to time the duration of the whole game from start to finish.
 // Create a popup function instead of using an alert before starting the game
-
-
-
-
-
