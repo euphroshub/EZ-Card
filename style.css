@@ -200,6 +200,10 @@ button {
     padding: 20px;
 }
 
+.quality {
+    color: red;
+}
+
 /* Functionality classes */
 .hidden {
     display: none;

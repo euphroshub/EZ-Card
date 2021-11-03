@@ -4,10 +4,11 @@
 // UI elements
 const intro = document.querySelector('.c-Intro');
 const game = document.querySelector('.c-Game');
-const endgame = document.querySelector('c-endGame');
+const endgame = document.querySelector('.c-endGame');
 const holeNumber = document.querySelector('.holeNumber');
 const finalScore = document.querySelector('.finalScore');
 const parScore = document.querySelector('.parScore');
+const quality = document.querySelector('.quality');
 
 // Buttons
 const btnStart = document.querySelector('.start');
@@ -33,27 +34,28 @@ btnStart.addEventListener('click', function(e) {
     let holesToPlay = +selectHoles.value;
     let coursePar = +inputPar.value;
 
-    if ((holesToPlay != '') && (coursePar >= 29 <= 73 )) {
+    if ((holesToPlay != '') && (coursePar >= 27 <= 73 )) {
         // Updating the ui to start the game if the condition is met.
         intro.classList.add('hidden');
         game.classList.remove('hidden');
         holeNumber.textContent = `Hole ${currentHole}`;
     } else {
-        alert("You must enter the number of holes and a par value between 29 and 73 to start the game");
+        alert("You must enter the number of holes and a par value between 29 and 73 to start the game.");
     }
 
-    // Logs
+    // Test Logs
     console.log(holesToPlay, typeof holesToPlay);
     console.log(coursePar, typeof holesToPlay);
 });
+
 
 // Play the game, update scores
 btnNext.addEventListener('click', function(e) {
     e.preventDefault();
 
-    // Checking the total holes to play and reducing them at each holes played.
-    let holesToPlay = +selectHoles.value;
-    holesToPlay--;
+    // Getting the par value and the number of holes to calculate the par score and to end the game.
+    const par = +inputPar.value;
+    const holes = +selectHoles.value;
 
     // Displaying the current hole in the UI.
     currentHole++;
@@ -74,11 +76,45 @@ btnNext.addEventListener('click', function(e) {
     document.querySelector('.score').value = '';
 
 
+    // End the game when there is no more holes to play and display the Score screen UI.
+    if (scoreList.length === holes) {
+        game.classList.add('hidden');
+        endgame.classList.remove('hidden');
+
+        // Update the UI to see the game data.
+        let parFinalScore = addedScore - par;
+
+        finalScore.textContent = addedScore;
+
+        if (parFinalScore < 0) {
+            parScore.textContent = `-${parFinalScore}`;
+        } else if (parFinalScore === 0) {
+            parScore.textContent = `${parFinalScore} | Par`;
+        } else if (parFinalScore > 0){
+            parScore.textContent = `+${parFinalScore}`;
+        }
+        
+        // Conditions to tell you if it was a good or a bad game.
+
+    }
+
+
 
     // Test Logs
+    console.log(`Holes to play: ${holes}`);
     console.log(`Total score: ${addedScore}`);
-    console.log(`Holes left: ${holesToPlay}`);
     console.log(`Current hole: ${currentHole}`);
+    console.log(`Score array: ${scoreList}`);
+    console.log(`Array length: ${scoreList.length}`);
+
+    
+});
+
+// Restart the game and restart values
+btnEnd.addEventListener('click', function(e) {
+    e.preventDefault();
+
+
 });
 
 
