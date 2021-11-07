@@ -95,7 +95,9 @@ btnNext.addEventListener('click', function(e) {
         }
         
         // Conditions to tell you if it was a good or a bad game.
-
+        if (parFinalScore <= 0) {
+            quality.textContent = 'You should think about becoming a pro or something if you are not already!';
+        }
 
     }
 
