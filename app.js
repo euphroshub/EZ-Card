@@ -34,7 +34,7 @@ btnStart.addEventListener('click', function(e) {
     let holesToPlay = +selectHoles.value;
     let coursePar = +inputPar.value;
 
-    if ((holesToPlay != '') && (coursePar >= 27 <= 73 )) {
+    if ((holesToPlay !== '') && (coursePar >= 27 <= 73 )) {
         // Updating the ui to start the game if the condition is met.
         intro.classList.add('hidden');
         game.classList.remove('hidden');
@@ -99,9 +99,23 @@ btnNext.addEventListener('click', function(e) {
             quality.textContent = 'You should think about becoming a pro or something if you are not already!';
         }
 
+        if (parFinalScore > 1 && parFinalScore < 10) {
+            quality.textContent = 'Very good game! Keep up the good work!';
+        }
+
+        if (parFinalScore > 11 && parFinalScore < 20) {
+            quality.textContent = 'Not bad, but you can surely do better, keep practicing!';
+        }
+
+        if (parFinalScore > 21 && parFinalScore < 30) {
+            quality.textContent = 'Well, a game to forget, and a some beers to drink to forget it';
+        }
+
+        if (parFinalScore > 31) {
+            quality.textContent = 'I am not one to judge, but that score is pretty bad my man!';
+        }
+
     }
-
-
 
     // Test Logs
     console.log(`Holes to play: ${holes}`);
